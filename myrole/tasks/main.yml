@@ -1,0 +1,25 @@
+---
+# tasks file for myrole
+- name: Install Apache
+  package:
+    name: "{{ apache_package }}"
+    state: present
+
+- name: Copy web page
+  copy:
+    content: |
+      <html>
+      <head><title>Hello Molecules</title></head>
+      <body>Hello little Molecules</body>
+      </html>
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart apache
+
+- name: Start apache service
+  service:
+    name: "{{ apache_service }}"
+    state: started
+    enabled: true
