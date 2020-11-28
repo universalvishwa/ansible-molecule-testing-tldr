@@ -18,7 +18,7 @@
     - _**driver**_: Set the driver for infrastructure to `docker`
     - _**lint**_: Configure linter script (`yamllint`, `ansible-lint`) and place the rule override files in root path of role.
     - _**platforms**_: Set the Dockerized OS distribution platform(s) to run Molecule test
-    - _**verifier**__: Set verification provider use to validate the test environment. `ansible`(default), `testinfra`
+    - _**verifier**_: Set verification provider use to validate the test environment. `ansible`(default), `testinfra`
     - Example of a `molecule.yml` file,
         ```yaml
         ---
