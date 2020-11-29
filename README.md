@@ -15,6 +15,7 @@
     - Delete this folder completely to avoid linting errors.
 4. Configure `molecule.yml` configuration file
     - _**dependency**_: Add dependent collections/roles to `molecule/default/requirements.yml`
+        - To install dependant roles to a custom location, create an `ansible.cfg` in role root path and set the `roles_path = ../` to the desired location.
     - _**driver**_: Set the driver for infrastructure to `docker`
     - _**lint**_: Configure linter script (`yamllint`, `ansible-lint`) and place the rule override files in root path of role.
     - _**platforms**_: Set the Dockerized OS distribution platform(s) to run Molecule test
@@ -25,7 +26,6 @@
         dependency:
           name: galaxy
           options:
-            ignore-certs: true
             requirements-file: requirements.yml
             role-file: requirements.yml
         driver:
