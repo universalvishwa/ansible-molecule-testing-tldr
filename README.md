@@ -1,5 +1,7 @@
 # TL;DR Creating Ansible roles with Molecule Testing
 
+[![CI](https://https://github.com/universalvishwa/ansible-molecule-testing-tldr/workflows/CI/badge.svg?event=push)](https://https://github.com/universalvishwa/ansible-molecule-testing-tldr/actions?query=workflow%3ACI)
+
 1. Create Virtual environment and install Python dependencies
     ```bash
     $ python3 -m venv venv
